@@ -10,7 +10,7 @@ const apodApi = axios.create({
 
 
 
-const addParam = (param, value) => {
+const getPhotoWithDate = (param, value) => {
     apodApi.defaults.params[param] = value;
   };
 
@@ -20,4 +20,5 @@ const addParam = (param, value) => {
 
 module.exports = {
     getPhoto,
+    getPhotoWithDate
 }
