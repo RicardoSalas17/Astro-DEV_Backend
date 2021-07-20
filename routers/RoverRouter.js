@@ -3,9 +3,8 @@ const router = express.Router();
 const RoverController = require('../controllers/RoverController');
 
 
-// Create
-// router.post('/users', UserController.create);
-
-router.get('/allPhotos', RoverController.getAll );
+router.get('/allPhotos/:rover_name', RoverController.getAll );
+router.get('/rover/:rover_name', RoverController.getRoverInfo)
+router.get('/:rover_name/:rover_camara', RoverController.getFilterPhotos);
 
 module.exports = router;
