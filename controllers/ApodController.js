@@ -2,6 +2,7 @@ const apodApi = require("../utils/apodAPI");
 
 module.exports = {
   getPhoto: async (req, res) => {
+    console.log("dentro")
     const responses = await apodApi.getPhoto();
     res
       .status(200)

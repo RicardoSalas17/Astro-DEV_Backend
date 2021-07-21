@@ -1,6 +1,14 @@
 require("dotenv").config();
+const cors = require('cors');
 const express = require("express");
 const app = express();
+const whiteList ="http://localhost:3001"
+app.use(
+  cors({
+    credentials: true,
+    origin: whiteList,
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
